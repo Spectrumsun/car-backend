@@ -16,7 +16,6 @@ class Car {
   }
   static async searchCars(req, res) {
     const { start, end, gender, countries, color } = req.query;
-    console.log(start, end, "hmm");
     try {
       const carResults = await models.Car.findAll({
         where: {
