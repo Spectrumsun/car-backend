@@ -25,7 +25,7 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start": "NODE_ENV=production yarn seed && yarn build && node build/app",
+    "start": "NODE_ENV=production yarn seed ",
     "dev": "nodemon --exec babel-node server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrations": "node_modules/.bin/sequelize db:migrate:undo:all && sequelize db:migrate",
