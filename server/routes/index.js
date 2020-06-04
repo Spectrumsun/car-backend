@@ -6,9 +6,9 @@ const router = express.Router();
 
 router.get("/", controller.welcome);
 
-router.get("/cars", controller.getAllCars);
+router.get("/phones", controller.getAllPhones);
 
-router.get("/search", controller.searchCars);
+// router.get("/search", controller.searchCars);
 
 router.use("*", (req, res) =>
   res.status(404).json({
@@ -18,22 +18,3 @@ router.use("*", (req, res) =>
 
 export default router;
 
-// where: {
-//   $or: [
-//     {
-//       centerName: {
-//         $iLike: `%${searchString}%`
-//       }
-//     },
-//     {
-//       city: {
-//         $iLike: `%${searchString}%`
-//       }
-//     },
-//     {
-//       availability: {
-//         $iLike: `%${searchString}%`
-//       }
-//     }
-//   ]
-// }
